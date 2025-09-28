@@ -145,7 +145,7 @@ jobs:
           key: ${{ secrets.PROD_SSH_KEY }}
           passphrase: ${{ secrets.PROD_SSH_PASSPHRASE }}
           script: |
-            cd taski-docker
+            cd projects/taski-docker
             sudo docker compose -f docker-compose.prod.yml pull
             sudo docker compose -f docker-compose.prod.yml down
             sudo docker compose -f docker-compose.prod.yml up -d
